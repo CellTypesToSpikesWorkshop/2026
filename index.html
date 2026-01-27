@@ -86,7 +86,18 @@
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
+    .card .photo {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: #ddd;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .card .info { min-width: 0; }
     .card .name { font-weight: 600; margin-bottom: 0.2rem; }
     .card .inst { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.3rem; }
     .card .email { font-size: 0.85rem; }
@@ -148,44 +159,68 @@
   <h2>Speakers</h2>
   <div class="cards">
     <div class="card">
-      <div class="name">Jonathan Pillow</div>
-      <div class="inst">Princeton University</div>
-      <div class="email"><a href="mailto:pillow@princeton.edu">pillow@princeton.edu</a></div>
+      <img class="photo" src="images/jonathan-pillow.jpg" alt="Jonathan Pillow">
+      <div class="info">
+        <div class="name">Jonathan Pillow</div>
+        <div class="inst">Princeton University</div>
+        <div class="email">pillow [at] princeton [dot] edu</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Eva Dyer</div>
-      <div class="inst">University of Pennsylvania</div>
-      <div class="email"><a href="mailto:eva.dyer@seas.upenn.edu">eva.dyer@seas.upenn.edu</a></div>
+      <img class="photo" src="images/eva-dyer.jpg" alt="Eva Dyer">
+      <div class="info">
+        <div class="name">Eva Dyer</div>
+        <div class="inst">University of Pennsylvania</div>
+        <div class="email">eva.dyer [at] seas [dot] upenn [dot] edu</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Maxime Beau</div>
-      <div class="inst">Princeton University</div>
-      <div class="email"><a href="mailto:maxime@princeton.edu">maxime@princeton.edu</a></div>
+      <img class="photo" src="images/maxime-beau.jpg" alt="Maxime Beau">
+      <div class="info">
+        <div class="name">Maxime Beau</div>
+        <div class="inst">Princeton University</div>
+        <div class="email">maxime [at] princeton [dot] edu</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Han Yu</div>
-      <div class="inst">Columbia University</div>
-      <div class="email"><a href="mailto:hy2562@columbia.edu">hy2562@columbia.edu</a></div>
+      <img class="photo" src="images/han-yu.jpg" alt="Han Yu">
+      <div class="info">
+        <div class="name">Han Yu</div>
+        <div class="inst">Columbia University</div>
+        <div class="email">hy2562 [at] columbia [dot] edu</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Manuel Valero</div>
-      <div class="inst">Hospital del Mar</div>
-      <div class="email"><a href="mailto:valegarman@gmail.com">valegarman@gmail.com</a></div>
+      <img class="photo" src="images/manuel-valero.jpg" alt="Manuel Valero">
+      <div class="info">
+        <div class="name">Manuel Valero</div>
+        <div class="inst">Hospital del Mar</div>
+        <div class="email">valegarman [at] gmail [dot] com</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Mehdi Azabou</div>
-      <div class="inst">Columbia University</div>
-      <div class="email"><a href="mailto:mehdiazabou@gmail.com">mehdiazabou@gmail.com</a></div>
+      <img class="photo" src="images/mehdi-azabou.jpg" alt="Mehdi Azabou">
+      <div class="info">
+        <div class="name">Mehdi Azabou</div>
+        <div class="inst">Columbia University</div>
+        <div class="email">mehdiazabou [at] gmail [dot] com</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Liset de la Prida</div>
-      <div class="inst">Instituto Cajal, CSIC</div>
-      <div class="email"><a href="mailto:lmprida@cajal.csic.es">lmprida@cajal.csic.es</a></div>
+      <img class="photo" src="images/liset-de-la-prida.jpg" alt="Liset de la Prida">
+      <div class="info">
+        <div class="name">Liset de la Prida</div>
+        <div class="inst">Instituto Cajal, CSIC</div>
+        <div class="email">lmprida [at] cajal [dot] csic [dot] es</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Anna Lakunina</div>
-      <div class="inst">Allen Institute</div>
-      <div class="email"><a href="mailto:anna.lakunina@alleninstitute.org">anna.lakunina@alleninstitute.org</a></div>
+      <img class="photo" src="images/anna-lakunina.jpg" alt="Anna Lakunina">
+      <div class="info">
+        <div class="name">Anna Lakunina</div>
+        <div class="inst">Allen Institute</div>
+        <div class="email">anna.lakunina [at] alleninstitute [dot] org</div>
+      </div>
     </div>
   </div>
 </section>
@@ -194,14 +229,20 @@
   <h2>Organizers</h2>
   <div class="cards">
     <div class="card">
-      <div class="name">Josh Siegle</div>
-      <div class="inst">Allen Institute for Neural Dynamics</div>
-      <div class="email"><a href="mailto:joshs@alleninstitute.org">joshs@alleninstitute.org</a></div>
+      <img class="photo" src="images/josh-siegle.jpg" alt="Josh Siegle">
+      <div class="info">
+        <div class="name">Josh Siegle</div>
+        <div class="inst">Allen Institute for Neural Dynamics</div>
+        <div class="email">joshs [at] alleninstitute [dot] org</div>
+      </div>
     </div>
     <div class="card">
-      <div class="name">Kenji Lee</div>
-      <div class="inst">Boston University</div>
-      <div class="email"><a href="mailto:kenjilee@bu.edu">kenjilee@bu.edu</a></div>
+      <img class="photo" src="images/kenji-lee.jpg" alt="Kenji Lee">
+      <div class="info">
+        <div class="name">Kenji Lee</div>
+        <div class="inst">Boston University</div>
+        <div class="email">kenjilee [at] bu [dot] edu</div>
+      </div>
     </div>
   </div>
 </section>
