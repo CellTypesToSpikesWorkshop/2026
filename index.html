@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COSYNE 2026 Workshop: Bridging the gap between cell types and spike trains">
+  <title>Bridging the gap between cell types and spike trains — COSYNE 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a1a;
+      --text-light: #555;
+      --border: #e0e0e0;
+      --bg-light: #f7f7f7;
+      --max-w: 960px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    a { color: #0055aa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+    }
+    nav a { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+    nav a:hover { color: #0055aa; text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 0.25rem;
+    }
+    .hero .meta {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* Sections */
+    section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    section + section { border-top: 1px solid var(--border); }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p + p { margin-top: 1rem; }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+    .card .name { font-weight: 600; margin-bottom: 0.2rem; }
+    .card .inst { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .card .email { font-size: 0.85rem; }
+
+    /* Schedule table */
+    .schedule-wrap { overflow-x: auto; margin-top: 1rem; }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: var(--bg-light); font-weight: 600; }
+    tr.break-row { background: var(--bg-light); }
+    tr.break-row td { font-style: italic; color: var(--text-light); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.5rem; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#speakers">Speakers</a>
+  <a href="#organizers">Organizers</a>
+  <a href="#schedule">Schedule</a>
+</nav>
+
+<header class="hero">
+  <h1>Bridging the gap between cell types and spike trains</h1>
+  <div class="subtitle">COSYNE 2026 Workshop</div>
+  <div class="meta">Monday, March 16, 2026 &middot; Cascais, Portugal</div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>Understanding the brain requires connecting the language of computation&mdash;spike trains&mdash;to the biological reality of distinct neuronal cell types. Each cell type has characteristic connectivity, intrinsic dynamics, and receptor expression, which together shape its contribution to circuit function. Yet in most systems neuroscience experiments, this critical link remains hidden: we record spikes, but rarely know which cell types they come from.</p>
+  <p>To move from descriptive surveys of neural activity to genuine mechanistic understanding of brain function, we must characterize population dynamics in terms of interactions between distinct cell types. Advances in electrode technology now enable brain-wide recordings with thousands of neurons, yet the ability to assign these signals to defined cell types remains a major bottleneck.</p>
+  <p>Ongoing efforts are expanding optotagging-based cell type identification across more brain regions and species, revealing how distinct cell types contribute to network dynamics during behavior. In tandem, machine learning classifiers are beginning to enable cell type identification directly from electrophysiological features. A concerted push is needed to transform proof-of-concept models into robust, widely accessible tools for the community.</p>
+  <p>This workshop will serve as a catalyst for comparing current approaches to cell type inference and establishing a roadmap for using cell type identification to generate new insights into brain function. We expect it to appeal to algorithm developers, experimentalists, and theoreticians alike.</p>
+</section>
+
+<section id="speakers">
+  <h2>Speakers</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="name">Jonathan Pillow</div>
+      <div class="inst">Princeton University</div>
+      <div class="email"><a href="mailto:pillow@princeton.edu">pillow@princeton.edu</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Eva Dyer</div>
+      <div class="inst">University of Pennsylvania</div>
+      <div class="email"><a href="mailto:eva.dyer@seas.upenn.edu">eva.dyer@seas.upenn.edu</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Maxime Beau</div>
+      <div class="inst">Princeton University</div>
+      <div class="email"><a href="mailto:maxime@princeton.edu">maxime@princeton.edu</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Han Yu</div>
+      <div class="inst">Columbia University</div>
+      <div class="email"><a href="mailto:hy2562@columbia.edu">hy2562@columbia.edu</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Manuel Valero</div>
+      <div class="inst">Hospital del Mar</div>
+      <div class="email"><a href="mailto:valegarman@gmail.com">valegarman@gmail.com</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Mehdi Azabou</div>
+      <div class="inst">Columbia University</div>
+      <div class="email"><a href="mailto:mehdiazabou@gmail.com">mehdiazabou@gmail.com</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Liset de la Prida</div>
+      <div class="inst">Instituto Cajal, CSIC</div>
+      <div class="email"><a href="mailto:lmprida@cajal.csic.es">lmprida@cajal.csic.es</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Anna Lakunina</div>
+      <div class="inst">Allen Institute</div>
+      <div class="email"><a href="mailto:anna.lakunina@alleninstitute.org">anna.lakunina@alleninstitute.org</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="organizers">
+  <h2>Organizers</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="name">Josh Siegle</div>
+      <div class="inst">Allen Institute</div>
+      <div class="email"><a href="mailto:joshs@alleninstitute.org">joshs@alleninstitute.org</a></div>
+    </div>
+    <div class="card">
+      <div class="name">Kenji Lee</div>
+      <div class="inst">Boston University</div>
+      <div class="email"><a href="mailto:kenjilee@bu.edu">kenjilee@bu.edu</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>Schedule</h2>
+  <div class="schedule-wrap">
+    <table>
+      <thead>
+        <tr><th>Time</th><th>Speaker</th><th>Topic</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9:15 – 9:30</td><td>Josh Siegle &amp; Kenji Lee</td><td>Workshop introduction</td></tr>
+        <tr><td>9:30 – 10:00</td><td>Liset de la Prida</td><td>Cell type-specific manifolds</td></tr>
+        <tr><td>10:00 – 10:30</td><td>Jonathan Pillow</td><td>Cell type dynamical systems</td></tr>
+        <tr class="break-row"><td>10:30 – 11:00</td><td colspan="2">Coffee break</td></tr>
+        <tr><td>11:00 – 11:30</td><td>Maxime Beau</td><td>Cell type classifiers for cerebellum</td></tr>
+        <tr><td>11:30 – 12:00</td><td>Manuel Valero</td><td>Cell type classifiers for hippocampus</td></tr>
+        <tr><td>12:00 – 12:30</td><td>Anna Lakunina</td><td>NP Opto + striatal ground truth dataset</td></tr>
+        <tr class="break-row"><td>12:30 – 3:00</td><td colspan="2">Lunch break</td></tr>
+        <tr><td>3:00 – 3:30</td><td>Mehdi Azabou</td><td>Classifiers using higher-order spiking patterns</td></tr>
+        <tr><td>3:30 – 4:00</td><td>Han Yu <em>(virtual)</em></td><td>Contrastive learning-based classifiers</td></tr>
+        <tr><td>4:00 – 4:30</td><td>Eva Dyer</td><td>Transformer-based cell type classifiers</td></tr>
+        <tr class="break-row"><td>4:30 – 5:00</td><td colspan="2">Coffee break</td></tr>
+        <tr><td>5:00 – 6:00</td><td>Panel discussion</td><td>Cross-species generalization, ground truth data, and building user-friendly tools</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  COSYNE 2026 Workshop &middot; Cascais, Portugal
+</footer>
+
+</body>
+</html>
