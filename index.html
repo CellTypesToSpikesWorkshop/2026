@@ -41,22 +41,46 @@
 
     /* Hero */
     .hero {
-      text-align: center;
-      padding: 4rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    .hero-img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      -webkit-mask-image: linear-gradient(to right, black 30%, transparent 80%);
+      mask-image: linear-gradient(to right, black 30%, transparent 80%);
+    }
+    .hero-text {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 62%;
+      transform: translateX(-50%);
+      width: 33%;
+      max-width: var(--max-w);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: right;
+      padding: 2rem 1.5rem;
     }
     .hero h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 0.75rem;
     }
     .hero .subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--text-light);
       margin-bottom: 0.25rem;
     }
     .hero .meta {
-      font-size: 0.95rem;
+      font-size: 1.0rem;
       color: var(--text-light);
     }
 
@@ -66,6 +90,7 @@
       margin: 0 auto;
       padding: 2.5rem 1.5rem;
     }
+    .hero + section { padding-top: 1.25rem; }
     section + section { border-top: 1px solid var(--border); }
 
     h2 {
@@ -127,7 +152,10 @@
     }
 
     @media (max-width: 600px) {
-      .hero h1 { font-size: 1.5rem; }
+      .hero-text { width: 60%; padding: 1rem; }
+      .hero h1 { font-size: 1.1rem; }
+      .hero .subtitle { font-size: 0.9rem; }
+      .hero .meta { font-size: 0.8rem; }
       .cards { grid-template-columns: 1fr; }
     }
   </style>
@@ -142,9 +170,12 @@
 </nav>
 
 <header class="hero">
-  <h1>Bridging the gap between cell types and spike trains</h1>
-  <div class="subtitle">COSYNE 2026 Workshop</div>
-  <div class="meta">Monday, March 16, 2026 &middot; Cascais, Portugal</div>
+  <img class="hero-img" src="images/Striatal cell types.png" alt="Striatal cell types illustration showing neurons with spike trains recorded by a Neuropixels probe">
+  <div class="hero-text">
+    <h1>Bridging the gap between cell types and spike trains</h1>
+    <div class="subtitle">COSYNE 2026 Workshop</div>
+    <div class="meta">Monday, March 16, 2026 &middot; Cascais, Portugal</div>
+  </div>
 </header>
 
 <section id="about">
